@@ -81,10 +81,14 @@ public class test1 extends basicTest{
 
 	@Override
 	public void endTest(RemoteWebDriver driver) {
-		driver.quit();
-
-		util.downloadReport(driver,"html","VSOTest_");
-		driver.close();
+	driver.quit();
+		try {
+			util.downloadReport(driver, "html", "VSO_REP");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
 	
 	}
 
