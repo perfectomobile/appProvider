@@ -85,7 +85,12 @@ public class test1 extends basicTest{
 	public void endTest(RemoteWebDriver driver) {
 	driver.quit();
 		try {
+				String current = new java.io.File( "." ).getCanonicalPath();
+				 System.out.println("***** DOWNLOAD REP Current dir:"+current);
+        
 			util.downloadReport(driver, "html", "VSO_REP");
+			 System.out.println("***** After "");
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
