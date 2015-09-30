@@ -83,20 +83,30 @@ public class test1 extends basicTest{
 
 	@Override
 	public void endTest(RemoteWebDriver driver) {
-	driver.close();
+		//close the test  
 		try {
-				String current = new java.io.File( "." ).getCanonicalPath();
-				 System.out.println("***** DOWNLOAD REP Current dir:"+current);
-        
-			util.downloadReport(driver, "html", "VSO_REP");
-			 System.out.println("***** After ");
+			String devId = (String) driver.getCapabilities().getCapability("deviceName");
+			driver.close();				
+			util.downloadReport(driver, "pdf", deviceID+"MS");	
 
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			//htmlReporter.addLine(_RWD,"FIRST test", deviceID,util.getReprtName(deviceID, true), rc,"");
+		} catch (IOException e) 
+		{
 			e.printStackTrace();
 		}
-	
-	
+		finally
+		{
+		
+			try{
+				driver.quit();
+
+			}catch(Exception e)
+			{
+				//  driver closed 
+			}
+
+		}
+
 	}
 
 
