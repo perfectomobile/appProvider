@@ -34,7 +34,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class util {
 
-	public static String REPORT_LIB = "/testOutput/";
+	public static String REPORT_LIB = "/Perfecto_testOutput/";
 	public static String SCREENSHOTS_LIB = "/Users/uzie/Documents/PMRepos/reports/";
 
 
@@ -43,9 +43,6 @@ public class util {
 		System.out.println("CloseTest");
 		driver.quit();
 	}
-
-
-
 
 
 	public static RemoteWebDriver getRWD(String deviceId)   {
