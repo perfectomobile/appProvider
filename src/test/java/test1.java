@@ -68,7 +68,6 @@ public class test1 extends basicTest{
 		driver.findElement(By.xpath(".//*[@class='rollover site'][1]")).click();
 
 
-
 	}
 
 	@Override
@@ -83,6 +82,8 @@ public class test1 extends basicTest{
 	@Override
 	public void endTest(RemoteWebDriver driver) {
 		driver.quit();
+		util.downloadReport();
+		driver.close();
 	
 	}
 
