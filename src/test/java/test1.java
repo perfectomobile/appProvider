@@ -87,7 +87,7 @@ public class test1 extends basicTest{
 		try {
 			String devId = (String) driver.getCapabilities().getCapability("deviceName");
 			driver.close();				
-			util.downloadReport(driver, "pdf", deviceID+"MS");	
+			util.downloadReport(driver, "pdf", devId +"MS");	
 
 			//htmlReporter.addLine(_RWD,"FIRST test", deviceID,util.getReprtName(deviceID, true), rc,"");
 		} catch (IOException e) 
