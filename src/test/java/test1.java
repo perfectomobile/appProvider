@@ -12,6 +12,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
 import java.io.IOException;
+import org.testng.Reporter;
+
 
 
 
@@ -38,7 +40,7 @@ public class test1 extends basicTest{
 	public void execTest(RemoteWebDriver driver) throws Exception {
 		// TODO Auto-generated method stub
 		System.out.println(" IN EXECUTE");
-		
+		Reporter.log(" TEST TO REPORTER");
 		String current = new java.io.File( "." ).getCanonicalPath();
         System.out.println("***** Current dir:"+current);
         
