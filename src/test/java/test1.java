@@ -89,7 +89,7 @@ public class test1 extends basicTest{
 				 System.out.println("***** DOWNLOAD REP Current dir:"+current);
         
 			util.downloadReport(driver, "html", "VSO_REP");
-			 System.out.println("***** After "");
+			 System.out.println("***** After ");
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
