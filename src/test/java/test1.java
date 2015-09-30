@@ -82,7 +82,8 @@ public class test1 extends basicTest{
 	@Override
 	public void endTest(RemoteWebDriver driver) {
 		driver.quit();
-		util.downloadReport();
+
+		util.downloadReport(driver,"html","VSOTest_");
 		driver.close();
 	
 	}
