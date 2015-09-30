@@ -83,7 +83,7 @@ public class test1 extends basicTest{
 
 	@Override
 	public void endTest(RemoteWebDriver driver) {
-	driver.quit();
+	driver.close();
 		try {
 				String current = new java.io.File( "." ).getCanonicalPath();
 				 System.out.println("***** DOWNLOAD REP Current dir:"+current);
