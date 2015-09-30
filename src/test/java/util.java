@@ -34,7 +34,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class util {
 
-	public static String REPORT_LIB = "./Perfecto_testOutput/";
+	public static String REPORT_LIB = "../../TestResults/";
 	public static String SCREENSHOTS_LIB = "/Users/uzie/Documents/PMRepos/reports/";
 
 
