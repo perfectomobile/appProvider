@@ -194,7 +194,7 @@ public class util {
 			File file = new File(".");
 			String currentDirectory = file.getAbsolutePath();
 			System.out.println("Current working directory : "+currentDirectory);
-			File f = new File("..\\testConfigFiles\\config1.txt");
+			File f = new File("..\\..\\testConfigFiles\\config1.txt");
 
 			br = new BufferedReader(new FileReader(f));
 			String line = null;  
