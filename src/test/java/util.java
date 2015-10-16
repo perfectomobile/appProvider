@@ -188,14 +188,21 @@ public class util {
 	public static List <String> getDevieList()
 	{
 		List<String> devices = new ArrayList();
-		System.out.println("EXECUET TEST BUILD THE LIST FROM THE FILE ");
+		System.out.println("EXECUET TEST BUILD THE LIST FROM THE FILE V1.0");
 		BufferedReader br;
 		try {
 			File file = new File(".");
 			String currentDirectory = file.getAbsolutePath();
 			System.out.println("Current working directory : "+currentDirectory);
-			File f = new File("..\\..\\config1.txt");
-
+         		System.out.println("file:"+".."+File.separator +".."+File.separator +"config1.txt");
+         		
+			File f;
+			try
+			{
+				 f = new File(".."+File.separator+".."+File.separator+"config1.txt");
+			} catch (FileNotFoundException e) {
+				 f = new File(".."+File.separator +"config1.txt");
+			}  
 			br = new BufferedReader(new FileReader(f));
 			String line = null;  
 			while ((line = br.readLine()) != null)  
